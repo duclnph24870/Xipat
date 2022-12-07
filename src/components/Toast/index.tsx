@@ -4,7 +4,7 @@ import { useSetToastInformationState } from "redux/store/ToastMessage";
 
 const Toast: () => JSX.Element = () => {
   const toastMessage = useSelector(
-    (state: any) => state.toastNotification.toastMessage
+    (state: any) => state?.toastNotification?.toastMessage
   );
   const { setToastInformation } = useSetToastInformationState();
   const closeToast = (
