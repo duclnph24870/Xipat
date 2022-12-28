@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import REDUX_SLICE_NAMES from "consts/redux-slice-names";
+import REDUX_SLICE_NAMES from "../../../consts/redux-slice-names";
 import { useDispatch } from "react-redux";
 
 interface InitialStateType {
@@ -10,7 +10,7 @@ const initialState: InitialStateType = {
   isLoading: false,
 };
 
-export const loadingSlice:any = createSlice({
+export const loadingSlice = createSlice({
   name: REDUX_SLICE_NAMES.LOADING_FULL_SCREEN,
   initialState,
   reducers: {

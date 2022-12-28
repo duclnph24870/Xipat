@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from "@mui/material";
 import { useSelector } from "react-redux";
-import { useSetToastInformationState } from "redux/store/ToastMessage";
+import { useSetToastInformationState } from "../../redux/store/ToastMessage";
 
 const Toast: () => JSX.Element = () => {
   const toastMessage = useSelector(

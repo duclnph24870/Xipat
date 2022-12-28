@@ -1,11 +1,11 @@
 import React, { useEffect, useReducer } from "react";
 
-import SplashScreen from "components/SplashScreen/index";
-import Toast from "components/Toast";
-import { STATUS_CODE } from "consts/statusCode";
-import { useSetUserInformationState } from "redux/store/userInfo";
-import { useSetToastInformationState } from "redux/store/ToastMessage";
-import { STATUS_TOAST } from "consts/statusCode";
+import SplashScreen from "../components/SplashScreen/index";
+import Toast from "../components/Toast";
+import { STATUS_CODE } from "../consts/statusCode";
+import { useSetUserInformationState } from "../redux/store/userInfo";
+import { useSetToastInformationState } from "../redux/store/ToastMessage";
+import { STATUS_TOAST } from "../consts/statusCode";
 
 const ACTION_TYPE = {
   INITIALISE: "INITIALISE",
@@ -73,11 +73,12 @@ export const AuthProvider = ({ children }: IAuthProviderProps) => {
   const login = async (data: any) => {
     localStorage.setItem("token", data.token);
     let userInfo = null;
-
     try {
       if (data.token) {
         // const responseUserInfo: any = await GetCurrentUser();
-        const responseUserInfo: any = "12313123131231231321123131313123";
+        const responseUserInfo: any = {
+          body: "12313123131231231321123131313123",
+        };
         if (responseUserInfo) {
           userInfo = responseUserInfo.body;
           if (userInfo) {
@@ -113,7 +114,9 @@ export const AuthProvider = ({ children }: IAuthProviderProps) => {
     try {
       if (token) {
         // const responseUserInfo: any = await GetCurrentUser();
-        const responseUserInfo: any = "1231231312313";
+        const responseUserInfo: any = {
+          body: "12313123131231231321123131313123",
+        };
         if (responseUserInfo) {
           userInfo = responseUserInfo.body;
           if (userInfo) {

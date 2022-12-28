@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import REDUX_SLICE_NAMES from "consts/redux-slice-names";
+import REDUX_SLICE_NAMES from "../../../consts/redux-slice-names";
 import { useDispatch } from "react-redux";
 
 interface InitialStateType {

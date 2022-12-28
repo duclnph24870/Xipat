@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@mui/styles";
-import LoadingScreen from "components/LoadingScreen";
+import LoadingScreen from "../../components/LoadingScreen";
 import { Box, Hidden, Paper } from "@mui/material";
-import { useLoadingScreen } from "hook/useLoadingScreen";
+import { useLoadingScreen } from "../../hook/useLoadingScreen";
 
 const useStyles = makeStyles({
   mainContainer: {

@@ -1,11 +1,11 @@
-import ROUTERS_PATHS from "consts/router-paths";
+import ROUTERS_PATHS from "../consts/router-paths";
 import React, { Suspense, Fragment, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import LoadingScreen from "components/LoadingScreen/index";
+import LoadingScreen from "../components/LoadingScreen/index";
 
-import AuthGuard from "components/AuthGuard";
-import GuestGuard from "components/GuestGuard";
-import MainLayout from "layouts/MainLayout";
+import AuthGuard from "../components/AuthGuard";
+import GuestGuard from "../components/GuestGuard";
+import MainLayout from "../layouts/MainLayout";
 
 interface IAuthGuardProps {
   children: React.ReactNode;
@@ -50,10 +50,10 @@ export const renderRoutes = (routes: IRoutesState[]) => (
 );
 
 const routes: IRoutesState[] = [
-  // {
-  //   path: ROUTERS_PATHS.NOT_FOUND,
-  //   component: lazy(() => import('pages/NotFoundView'))
-  // },
+  {
+    path: ROUTERS_PATHS.LOGIN,
+    component: lazy(() => import('../pages/Login'))
+  },
   // {
   //   guard: GuestGuard,
   //   path: ROUTERS_PATHS.LOGIN,
@@ -64,25 +64,25 @@ const routes: IRoutesState[] = [
   //   path: ROUTERS_PATHS.FORGOT_PASSWORD,
   //   component: lazy(() => import('pages/ForgotPassword'))
   // },
-  // {
-  //   path: ROUTERS_PATHS.ALL,
-  //   guard: AuthGuard,
-  //   layout: MainLayout,
-  //   routes: [
-  //     {
-  //       path: ROUTERS_PATHS.DASHBOARD,
-  //       component: lazy(() => import('pages/Dashboard'))
-  //     },
-  //     {
-  //       path: ROUTERS_PATHS.COUSRE,
-  //       component: lazy(() => import('pages/Cousre'))
-  //     },
-  //     {
-  //       path: ROUTERS_PATHS.USER,
-  //       component: lazy(() => import('pages/User'))
-  //     }
-  //   ]
-  // }
+  {
+    path: ROUTERS_PATHS.ALL,
+    guard: AuthGuard,
+    layout: MainLayout,
+    routes: [
+      {
+        path: ROUTERS_PATHS.DASHBOARD,
+        component: lazy(() => import('../pages/Dashboard'))
+      },
+      // {
+      //   path: ROUTERS_PATHS.COUSRE,
+      //   component: lazy(() => import('pages/Cousre'))
+      // },
+      // {
+      //   path: ROUTERS_PATHS.USER,
+      //   component: lazy(() => import('pages/User'))
+      // }
+    ]
+  }
 ];
 
 export default routes;
