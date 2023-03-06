@@ -1,6 +1,6 @@
-import type { Theme, ThemeOptions } from '@mui/material/styles';
+import type { ThemeOptions } from '@mui/material/styles';
 
-const TextField = (_theme: Theme): ThemeOptions['components'] => {
+const TextField = (): ThemeOptions['components'] => {
    return {
       MuiTextField: {
          defaultProps: {

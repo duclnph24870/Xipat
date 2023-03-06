@@ -1,6 +1,6 @@
-import type { Theme, ThemeOptions } from '@mui/material/styles';
+import type { ThemeOptions } from '@mui/material/styles';
 
-const Button = (_theme: Theme): ThemeOptions['components'] => {
+const Button = (): ThemeOptions['components'] => {
    return {
       MuiButton: {
          defaultProps: {

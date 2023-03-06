@@ -1,6 +1,9 @@
-import { Button, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import useAuth from '../../hook/useAuth';
+import { yupLogin, TFormLogin,yupResolver } from '~/utils/yups/yupUser';
+import useAuth from '~/hook/useAuth';
+import ControlTextField from '~/components/Form/ControllerTextField';
 
 const Login = () => {
    const { login } = useAuth();
@@ -17,9 +20,14 @@ const Login = () => {
          navigate('/', { replace: false });
       } catch (error) {}
    };
+   const { control } = useForm<TFormLogin>({
+      mode: 'onChange',
+      resolver: yupResolver(yupLogin),
+      defaultValues: yupLogin.getDefault()
+   });
    return (
       <>
-         1231312313123123 <button onClick={() => handleLogin()}>Đăng nhập</button>
+         <button onClick={() => handleLogin()}>Đăng nhập</button>
          <TextField />
          <Button
             size='large'
@@ -28,8 +36,12 @@ const Login = () => {
             className='askdjfhasdjkfhasdjklfhasldfhasdjlfhasdfadfadfaadf'>
             asdfad
          </Button>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum possimus quaerat eos! Repudiandae sed
-         repellat sint explicabo recusandae illum nulla quidem nesciunt possimus in deserunt tenetur, dolor sunt vel!
+         <Box width='400px' margin='0 auto'>
+            <form>
+               <ControlTextField control={control} name='email' />
+               <ControlTextField control={control} name='password' />
+            </form>
+         </Box>
       </>
    );
 };
