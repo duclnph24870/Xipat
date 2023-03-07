@@ -1,4 +1,4 @@
-import REDUX_SLICE_NAMES from '../consts/redux-slice-names';
+import REDUX_SLICE_NAMES from '../constants/redux-slice-names';
 
 import { useSelector } from 'react-redux';
 import { useSetLoadingScreenState } from '../redux/store/loadingScreen';

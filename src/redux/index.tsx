@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from 'react-redux';
-import REDUX_SLICE_NAMES from '../consts/redux-slice-names';
+import REDUX_SLICE_NAMES from '../constants/redux-slice-names';
 import loadingSlice from './store/loadingScreen';
 import toastMessageSlice from './store/ToastMessage';
 import userSlice from './store/userInfo';

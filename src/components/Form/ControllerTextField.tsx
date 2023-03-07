@@ -1,7 +1,14 @@
+import type { TextFieldProps } from '@mui/material/TextField';
 import TextField from '@mui/material/TextField';
+import type { Control, FieldPath, FieldValues } from 'react-hook-form';
 import { Controller } from 'react-hook-form';
 
-const ControlTextField = (props: any) => {
+interface Props<T> extends Omit<TextFieldProps, 'name'> {
+   name: FieldPath<T>;
+   control: Control<T>;
+}
+
+const ControllerTextField = <T extends FieldValues>(props: Props<T>) => {
    const { control, name, placeholder, disabled, ...rest } = props;
    return (
       <Controller
@@ -23,4 +30,4 @@ const ControlTextField = (props: any) => {
    );
 };
 
-export default ControlTextField;
+export default ControllerTextField;

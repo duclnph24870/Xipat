@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import ROUTERS_PATHS from '../../consts/router-paths';
+import ROUTERS_PATHS from '../../constants/router-paths';
 import useAuth from '../../hook/useAuth';
 
 interface GuestGuardProps {

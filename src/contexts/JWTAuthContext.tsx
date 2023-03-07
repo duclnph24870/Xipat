@@ -2,7 +2,7 @@ import React, { useEffect, useReducer } from 'react';
 
 import SplashScreen from '../components/SplashScreen/index';
 import Toast from '../components/Toast';
-import { STATUS_CODE, STATUS_TOAST } from '../consts/statusCode';
+import { STATUS_CODE, STATUS_TOAST } from '../constants/statusCode';
 import { useSetUserInformationState } from '../redux/store/userInfo';
 import { useSetToastInformationState } from '../redux/store/ToastMessage';
 

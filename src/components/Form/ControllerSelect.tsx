@@ -13,7 +13,7 @@ interface ISelect extends FieldValues {
 const ControllerSelect = (props: ISelect) => {
    const { label, options } = props;
 
-   const { control, name, placeholder, disabled, interpolation, ...rest } = props;
+   const { control, name, placeholder, disabled, ...rest } = props;
    return (
       <Controller
          render={({ field, fieldState: { error } }) => (
@@ -31,7 +31,7 @@ const ControllerSelect = (props: ISelect) => {
                   {...rest}
                   labelId='demo-simple-select-label'
                   label={label}>
-                  {options.map((item: any, index: number) => (
+                  {options.map((item, index: number) => (
                      <MenuItem key={index} value={item}>
                         {item}
                      </MenuItem>

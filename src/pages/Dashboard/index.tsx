@@ -35,12 +35,7 @@ const Dashboard = () => {
                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis atque necessitatibus adipisci magni
                aliquam saepe sit veniam vel ex est et omnis cum, totam libero perferendis facere quo provident quaerat.
             </Typography>
-            <ControlTextField
-               rows={4}
-               error={{ message: 'Vui long nhap field' }}
-               name='description'
-               control={control}
-            />
+            <ControlTextField rows={4} name='describe' control={control} />
             <ControllerSelect name='status' control={control} options={fakeOptions} label={'select status'} />
             <ModalConfirm setOpen={setOpen} open={open} title='ban co muon xoa'>
                <Button color='error' variant='outlined'>

@@ -1,10 +1,9 @@
 import { Controller, FieldValues } from 'react-hook-form';
 // mui
-import { Dispatch } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent, SelectProps } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
 interface ISelect extends FieldValues {
    label: string;
@@ -14,7 +13,7 @@ interface ISelect extends FieldValues {
 const ControllerCheckbox = (props: ISelect) => {
    const { label, options } = props;
 
-   const { control, name, placeholder, disabled, interpolation, ...rest } = props;
+   const { control, name, placeholder, disabled, ...rest } = props;
    return (
       <Controller
          render={({ field, fieldState: { error } }) => (
@@ -30,7 +29,7 @@ const ControllerCheckbox = (props: ISelect) => {
                   {...rest}
                   labelId='demo-simple-select-label'
                   label={label}>
-                  {options.map((item: any, index: number) => (
+                  {options.map((item, index: number) => (
                      <MenuItem key={index} value={item}>
                         {item}
                      </MenuItem>

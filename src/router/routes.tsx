@@ -1,4 +1,4 @@
-import ROUTERS_PATHS from '../consts/router-paths';
+import ROUTERS_PATHS from '../constants/router-paths';
 import React, { Suspense, Fragment, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LoadingScreen from '../components/LoadingScreen/index';
