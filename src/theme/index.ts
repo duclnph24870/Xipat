@@ -25,7 +25,7 @@ declare module '@mui/material/styles' {
 }
 
 export const createTheme = (): Theme => {
-   const theme = createMuiTheme({
+   const theme: any = createMuiTheme({
       ...palette,
       ...typography
    });
