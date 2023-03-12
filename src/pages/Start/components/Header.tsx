@@ -73,7 +73,7 @@ const ContainerLogo = styled('div')({
     height: 70
 });
 
-const LogoImage = styled('img')({
+export const LogoImage = styled('img')({
     width: '100%',
     height: '100%',
     objectFit: 'contain'

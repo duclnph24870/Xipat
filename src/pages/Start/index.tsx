@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Box } from '@mui/system';
 import { images } from '~/acssets/images';
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 function Start() {
@@ -10,14 +11,15 @@ function Start() {
             <Box component={'main'} sx={{ mt: '80px' }}>
                 <BannerStart className='bannerStart' />
             </Box>
-            <footer>Footer</footer>
+            <Footer />
         </Container>
     );
 }
 
 const Container = styled('div')({
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    overflow: 'hidden'
 });
 
 const BannerStart = styled('div')(({ theme }: any) => {
