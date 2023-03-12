@@ -36,13 +36,13 @@ function Header() {
                         active: activeMenuResponsive
                     })}>
                     <Box component={'li'} sx={{ listStyle: 'none', textTransform: 'uppercase' }}>
-                        <Link to='/'>Cán bộ đào tạo</Link>
+                        <Link to='/login?manage'>Cán bộ đào tạo</Link>
                     </Box>
                     <Box component={'li'} sx={{ listStyle: 'none', textTransform: 'uppercase' }}>
-                        <Link to='/'>Giảng viên</Link>
+                        <Link to='/login?teacher'>Giảng viên</Link>
                     </Box>
                     <Box component={'li'} sx={{ listStyle: 'none', textTransform: 'uppercase' }}>
-                        <Link to='/'>Phụ Huynh</Link>
+                        <Link to='/login?parents'>Phụ Huynh</Link>
                     </Box>
                 </ListMenu>
 
