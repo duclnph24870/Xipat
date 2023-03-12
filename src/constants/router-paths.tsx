@@ -1,7 +1,8 @@
 const ROUTERS_PATHS = {
    LOGIN: '/login',
    NOT_FOUND: '/not-found',
-   DASHBOARD: '/',
+   DASHBOARD: '/dashboard',
+   START: '/',
    ALL: '*'
 };
 

@@ -5,6 +5,6 @@ import Button from './Button';
 import InputLabel from './InputLabel';
 import Select from './Select';
 import TextField from './TextField';
-const overrides = (theme: Theme) => merge({}, TextField(theme), Button(theme), Select(theme), InputLabel(theme));
+const overrides = (theme: Theme) => merge({}, TextField(), Button(), Select(), InputLabel());
 
 export default overrides;
